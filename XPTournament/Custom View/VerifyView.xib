@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VerifyView" customModule="XPTournament" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ME-ge-1jU">
+                    <rect key="frame" x="20" y="667" width="335" height="312"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_resendcode_bg" translatesAutoresizingMaskIntoConstraints="NO" id="uwb-v2-zLU">
+                            <rect key="frame" x="95.5" y="30" width="144" height="98"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your account has been successfully verified." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXb-CZ-r3E" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                            <rect key="frame" x="30" y="153" width="275" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="bQQ-Zn-FxI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGg-gF-ONS" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                            <rect key="frame" x="30" y="224" width="275" height="58"/>
+                            <color key="backgroundColor" red="0.23137254900000001" green="0.40784313729999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="WGg-gF-ONS" secondAttribute="height" multiplier="275:58" id="fCU-ae-zaO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                            <state key="normal" title="Ok">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnOkClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="ErY-d2-s90"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="WGg-gF-ONS" secondAttribute="bottom" constant="30" id="8Oi-oo-aeF"/>
+                        <constraint firstItem="HXb-CZ-r3E" firstAttribute="top" secondItem="uwb-v2-zLU" secondAttribute="bottom" constant="25" id="FSs-fc-B6E"/>
+                        <constraint firstItem="WGg-gF-ONS" firstAttribute="centerX" secondItem="9ME-ge-1jU" secondAttribute="centerX" id="Jad-Zm-8mo"/>
+                        <constraint firstAttribute="trailing" secondItem="HXb-CZ-r3E" secondAttribute="trailing" constant="30" id="Jc5-Fz-ebS"/>
+                        <constraint firstItem="HXb-CZ-r3E" firstAttribute="leading" secondItem="9ME-ge-1jU" secondAttribute="leading" constant="30" id="Ky8-ry-g58"/>
+                        <constraint firstItem="WGg-gF-ONS" firstAttribute="width" secondItem="9ME-ge-1jU" secondAttribute="width" multiplier="0.820896" id="dpj-is-vLD"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="mt7-rn-BvP"/>
+                        <constraint firstItem="uwb-v2-zLU" firstAttribute="top" secondItem="9ME-ge-1jU" secondAttribute="top" constant="30" id="rdB-2C-nKQ"/>
+                        <constraint firstItem="WGg-gF-ONS" firstAttribute="top" secondItem="HXb-CZ-r3E" secondAttribute="bottom" constant="35" id="tvU-P9-JuG"/>
+                        <constraint firstItem="uwb-v2-zLU" firstAttribute="centerX" secondItem="9ME-ge-1jU" secondAttribute="centerX" id="ula-1M-HBf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9ME-ge-1jU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="667" id="G0M-eH-QBX"/>
+                <constraint firstItem="9ME-ge-1jU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="SMv-xY-hda"/>
+                <constraint firstAttribute="trailing" secondItem="9ME-ge-1jU" secondAttribute="trailing" constant="20" id="pLd-9P-BHD"/>
+            </constraints>
+            <connections>
+                <outlet property="btnOk" destination="WGg-gF-ONS" id="ywl-7j-ZAq"/>
+                <outlet property="imgVLogo" destination="uwb-v2-zLU" id="6PK-AL-bSS"/>
+                <outlet property="lblVerify" destination="HXb-CZ-r3E" id="yvd-Ku-RTY"/>
+                <outlet property="vwAlertVerify" destination="9ME-ge-1jU" id="VPs-EX-NrF"/>
+            </connections>
+            <point key="canvasLocation" x="-164" y="73"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_resendcode_bg" width="144.5" height="98"/>
+    </resources>
+</document>

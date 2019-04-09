@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UpcomingMatchHeader" customModule="XPTournament" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Tournament " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv3-7o-zWw" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                    <rect key="frame" x="20" y="18" width="153.66666666666666" height="24"/>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round  2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcE-Bc-SWh" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                    <rect key="frame" x="298" y="21" width="62" height="18"/>
+                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zcE-Bc-SWh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4Oa-Xw-7Yo"/>
+                <constraint firstItem="Qv3-7o-zWw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Ewi-1E-fvA"/>
+                <constraint firstItem="zcE-Bc-SWh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Qv3-7o-zWw" secondAttribute="trailing" constant="15" id="JsI-Ix-zVW"/>
+                <constraint firstAttribute="trailing" secondItem="zcE-Bc-SWh" secondAttribute="trailing" constant="15" id="Xgm-0P-4PW"/>
+                <constraint firstItem="Qv3-7o-zWw" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tjA-NJ-KpR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblRoundName" destination="zcE-Bc-SWh" id="eqk-z1-QzM"/>
+                <outlet property="lblTournamentName" destination="Qv3-7o-zWw" id="mib-SG-v7k"/>
+            </connections>
+        </view>
+    </objects>
+</document>

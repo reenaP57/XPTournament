@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view userInteractionEnabled="NO" contentMode="scaleToFill" id="tgw-Q7-3j0" customClass="ConnectionAlertView" customModule="XPTournament" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iFN-aC-QCV">
+                    <rect key="frame" x="0.0" y="0.0" width="342" height="45"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connecting With Server..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4Q-rm-rwm" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="10" width="332" height="35"/>
+                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.84819135273972601" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="b4Q-rm-rwm" firstAttribute="leading" secondItem="iFN-aC-QCV" secondAttribute="leading" id="CNQ-wO-oM1"/>
+                        <constraint firstAttribute="bottom" secondItem="b4Q-rm-rwm" secondAttribute="bottom" id="RP1-pY-hDK"/>
+                        <constraint firstItem="b4Q-rm-rwm" firstAttribute="top" secondItem="iFN-aC-QCV" secondAttribute="top" constant="10" id="pBE-1K-w6P"/>
+                        <constraint firstAttribute="trailing" secondItem="b4Q-rm-rwm" secondAttribute="trailing" constant="10" id="tXO-3y-J0t"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="iFN-aC-QCV" secondAttribute="trailing" id="4ua-Tb-d4A"/>
+                <constraint firstItem="iFN-aC-QCV" firstAttribute="top" secondItem="tgw-Q7-3j0" secondAttribute="top" id="CgB-6w-Wi7"/>
+                <constraint firstAttribute="bottom" secondItem="iFN-aC-QCV" secondAttribute="bottom" id="ORI-Y1-k6f"/>
+                <constraint firstItem="iFN-aC-QCV" firstAttribute="leading" secondItem="tgw-Q7-3j0" secondAttribute="leading" id="YJG-54-WS9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="3xe-F6-ddG"/>
+            <connections>
+                <outlet property="lblMessage" destination="b4Q-rm-rwm" id="y3S-x3-a3r"/>
+                <outlet property="viewConnectionAlert" destination="iFN-aC-QCV" id="JIH-Yy-odA"/>
+            </connections>
+            <point key="canvasLocation" x="-1.6000000000000001" y="26.53673163418291"/>
+        </view>
+    </objects>
+</document>

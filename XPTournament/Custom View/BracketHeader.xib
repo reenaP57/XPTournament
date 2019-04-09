@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Light.ttf">
+            <string>Rubik-Light</string>
+        </array>
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BracketHeader" customModule="XPTournament" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lVJ-In-RaS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="lVJ-In-RaS" secondAttribute="height" multiplier="375:56" id="Mph-tC-IkB"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hX0-1a-YcW">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="u2c-Ny-ADr"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="Ksd-Fx-UcN"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xtp-Yr-mh1">
+                    <rect key="frame" x="0.0" y="56" width="343" height="1"/>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="WhY-Td-XdP"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loz-tb-P5j" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                    <rect key="frame" x="16" y="79" width="78" height="18"/>
+                    <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="15"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBW-cJ-ObT" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                    <rect key="frame" x="99" y="77.5" width="8.5" height="21"/>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ongoing:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMl-nW-JCq" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                    <rect key="frame" x="122.5" y="79" width="61" height="18"/>
+                    <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="15"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zJ-Q1-sQn" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                    <rect key="frame" x="188.5" y="77.5" width="23" height="21"/>
+                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Xtp-Yr-mh1" secondAttribute="trailing" constant="32" id="16T-G0-v9x"/>
+                <constraint firstItem="ZMl-nW-JCq" firstAttribute="centerY" secondItem="Loz-tb-P5j" secondAttribute="centerY" id="5Gg-m6-suw"/>
+                <constraint firstItem="Xtp-Yr-mh1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8Pw-j0-7FK"/>
+                <constraint firstItem="Xtp-Yr-mh1" firstAttribute="top" secondItem="lVJ-In-RaS" secondAttribute="bottom" id="DZj-zT-6BT"/>
+                <constraint firstItem="bBW-cJ-ObT" firstAttribute="centerY" secondItem="Loz-tb-P5j" secondAttribute="centerY" id="Dzt-Eq-bPZ"/>
+                <constraint firstItem="bBW-cJ-ObT" firstAttribute="leading" secondItem="Loz-tb-P5j" secondAttribute="trailing" constant="5" id="GKz-HY-dIc"/>
+                <constraint firstItem="Loz-tb-P5j" firstAttribute="top" secondItem="Xtp-Yr-mh1" secondAttribute="bottom" constant="22" id="LR8-gb-aWN"/>
+                <constraint firstItem="lVJ-In-RaS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QdK-GB-GUH"/>
+                <constraint firstItem="5zJ-Q1-sQn" firstAttribute="centerY" secondItem="ZMl-nW-JCq" secondAttribute="centerY" id="RiK-6t-5oA"/>
+                <constraint firstItem="5zJ-Q1-sQn" firstAttribute="leading" secondItem="ZMl-nW-JCq" secondAttribute="trailing" constant="5" id="ZFc-uO-P9e"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5zJ-Q1-sQn" secondAttribute="trailing" constant="15" id="j9w-Ra-41D"/>
+                <constraint firstItem="lVJ-In-RaS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kWx-sB-xmq"/>
+                <constraint firstItem="ZMl-nW-JCq" firstAttribute="leading" secondItem="bBW-cJ-ObT" secondAttribute="trailing" constant="15" id="oA2-W9-k88"/>
+                <constraint firstAttribute="trailing" secondItem="lVJ-In-RaS" secondAttribute="trailing" id="p55-74-eFJ"/>
+                <constraint firstItem="Loz-tb-P5j" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="woe-sV-SGO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="clRound" destination="lVJ-In-RaS" id="gLP-om-leC"/>
+                <outlet property="lblCompletedCount" destination="bBW-cJ-ObT" id="9Bd-Bo-DEH"/>
+                <outlet property="lblOnGoingCount" destination="5zJ-Q1-sQn" id="lYM-LO-uXn"/>
+            </connections>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="WUj-DB-Pti" customClass="TournamentDetailMyLiveHeader" customModule="XPTournament" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYl-OP-MFs">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPV-5O-wwH">
+                            <rect key="frame" x="15" y="0.0" width="345" height="1"/>
+                            <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="ZtW-7j-jy9"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyn-jC-Wbc" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                            <rect key="frame" x="15" y="20" width="345" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" id="V5A-gZ-Oy2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsE-xg-1sU">
+                            <rect key="frame" x="15" y="89" width="345" height="1"/>
+                            <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="jEr-Ez-gEo"/>
+                            </constraints>
+                        </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pn9-Uu-ciG">
+                            <rect key="frame" x="0.0" y="34" width="375" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="zMT-ew-syG"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Db8-LW-vue">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="WUj-DB-Pti" id="wpd-ME-Hvf"/>
+                                <outlet property="delegate" destination="WUj-DB-Pti" id="GrA-1z-XzR"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="WPV-5O-wwH" firstAttribute="top" secondItem="dYl-OP-MFs" secondAttribute="top" id="3ii-Fl-A66"/>
+                        <constraint firstAttribute="bottom" secondItem="fsE-xg-1sU" secondAttribute="bottom" id="LhA-7Q-CEz"/>
+                        <constraint firstItem="fsE-xg-1sU" firstAttribute="leading" secondItem="dYl-OP-MFs" secondAttribute="leading" constant="15" id="T67-Ls-Tts"/>
+                        <constraint firstItem="WPV-5O-wwH" firstAttribute="leading" secondItem="dYl-OP-MFs" secondAttribute="leading" constant="15" id="TyN-eR-28X"/>
+                        <constraint firstAttribute="trailing" secondItem="pn9-Uu-ciG" secondAttribute="trailing" id="WsR-pq-3il"/>
+                        <constraint firstItem="pn9-Uu-ciG" firstAttribute="leading" secondItem="dYl-OP-MFs" secondAttribute="leading" id="ZGJ-Da-c36"/>
+                        <constraint firstAttribute="trailing" secondItem="WPV-5O-wwH" secondAttribute="trailing" constant="15" id="cqj-w9-Ago"/>
+                        <constraint firstAttribute="trailing" secondItem="fsE-xg-1sU" secondAttribute="trailing" constant="15" id="ev8-yg-RJf"/>
+                        <constraint firstAttribute="bottom" secondItem="pn9-Uu-ciG" secondAttribute="bottom" id="jbn-U5-rzM"/>
+                        <constraint firstItem="jyn-jC-Wbc" firstAttribute="leading" secondItem="dYl-OP-MFs" secondAttribute="leading" constant="15" id="rNo-c6-QQY"/>
+                        <constraint firstItem="jyn-jC-Wbc" firstAttribute="top" secondItem="WPV-5O-wwH" secondAttribute="bottom" constant="19" id="u4L-If-Ct6"/>
+                        <constraint firstAttribute="trailing" secondItem="jyn-jC-Wbc" secondAttribute="trailing" constant="15" id="upf-pW-Q3V"/>
+                        <constraint firstAttribute="height" constant="90" id="vCv-x4-79y"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="dYl-OP-MFs" firstAttribute="top" secondItem="WUj-DB-Pti" secondAttribute="top" id="SbQ-fi-pfr"/>
+                <constraint firstItem="dYl-OP-MFs" firstAttribute="leading" secondItem="CB5-RU-mDv" secondAttribute="leading" id="cJ4-gG-EQs"/>
+                <constraint firstItem="dYl-OP-MFs" firstAttribute="trailing" secondItem="CB5-RU-mDv" secondAttribute="trailing" id="xuh-Aj-79B"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="CB5-RU-mDv"/>
+            <connections>
+                <outlet property="clRound" destination="pn9-Uu-ciG" id="ppi-j5-Roh"/>
+                <outlet property="lblRunningRound" destination="jyn-jC-Wbc" id="QTP-Jf-G6b"/>
+            </connections>
+            <point key="canvasLocation" x="88.799999999999997" y="234.33283358320841"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="344" id="KGk-i7-Jjw" customClass="MyMatchNotesTblCell" customModule="XPTournament" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="296"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="295.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOn-Cc-E0V" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                        <rect key="frame" x="15" y="15" width="27.5" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="tbK-qi-v0Q"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dmb-v1-GRg" customClass="MIGenericView" customModule="XPTournament" customModuleProvider="target">
+                        <rect key="frame" x="15" y="48" width="345" height="230"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fnk-L4-to5">
+                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="230"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JQ-Ei-aIk" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="12" width="147.5" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="usi-Wo-W7n"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bolt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YWa-MZ-IMl">
+                                        <rect key="frame" x="50" y="38" width="58" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="TQh-QP-xcz"/>
+                                            <constraint firstAttribute="width" constant="58" id="pNv-wL-ddV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZR-gC-lZY" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="104" width="147.5" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="i7a-qd-lsZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                                        <color key="textColor" red="0.23137254901960785" green="0.40784313725490196" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gud-E5-rwY" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="34" y="136" width="34" height="34"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.090196078431372548" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="16D-c6-bhL"/>
+                                            <constraint firstAttribute="width" constant="34" id="Y93-o3-zXq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="-1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnRedMinusClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vOr-WW-zxN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EU-jg-9A7" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="89.5" y="136" width="34" height="34"/>
+                                        <color key="backgroundColor" red="0.043137254901960784" green="0.78431372549019607" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Nxs-52-bec"/>
+                                            <constraint firstAttribute="width" constant="34" id="cmJ-KG-xQU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="+1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnGreenPlusClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jGI-Q6-jcG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08J-h5-lwt" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="34" y="178" width="34" height="34"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.090196078430000007" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="-5">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnRedMinusClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Zii-hS-C7B"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxl-Yt-yP5" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="89.5" y="178" width="34" height="34"/>
+                                        <color key="backgroundColor" red="0.043137254901960784" green="0.78431372549019607" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="+5">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnGreenPlusClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2eA-da-ub9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6ZR-gC-lZY" secondAttribute="trailing" constant="5" id="0Xs-NP-hvx"/>
+                                    <constraint firstAttribute="trailing" secondItem="7JQ-Ei-aIk" secondAttribute="trailing" constant="5" id="773-rT-y4a"/>
+                                    <constraint firstItem="08J-h5-lwt" firstAttribute="height" secondItem="gud-E5-rwY" secondAttribute="height" id="959-na-ZsD"/>
+                                    <constraint firstItem="gud-E5-rwY" firstAttribute="centerX" secondItem="Fnk-L4-to5" secondAttribute="centerX" multiplier="0.65" id="A0c-36-gVH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="AaC-0I-MKY"/>
+                                    <constraint firstItem="08J-h5-lwt" firstAttribute="top" secondItem="gud-E5-rwY" secondAttribute="bottom" constant="8" id="Dhh-ht-Qh2"/>
+                                    <constraint firstItem="YWa-MZ-IMl" firstAttribute="centerX" secondItem="Fnk-L4-to5" secondAttribute="centerX" id="Emf-3K-kL1"/>
+                                    <constraint firstItem="sxl-Yt-yP5" firstAttribute="top" secondItem="6EU-jg-9A7" secondAttribute="bottom" constant="8" id="EqS-8b-d71"/>
+                                    <constraint firstItem="sxl-Yt-yP5" firstAttribute="height" secondItem="6EU-jg-9A7" secondAttribute="height" id="I5n-0b-kaG"/>
+                                    <constraint firstItem="sxl-Yt-yP5" firstAttribute="width" secondItem="6EU-jg-9A7" secondAttribute="width" id="POR-Sm-rtk"/>
+                                    <constraint firstItem="sxl-Yt-yP5" firstAttribute="centerX" secondItem="6EU-jg-9A7" secondAttribute="centerX" id="Pfa-GS-67P"/>
+                                    <constraint firstItem="6EU-jg-9A7" firstAttribute="centerX" secondItem="Fnk-L4-to5" secondAttribute="centerX" multiplier="1.35" id="SgC-LU-tvV"/>
+                                    <constraint firstItem="YWa-MZ-IMl" firstAttribute="top" secondItem="7JQ-Ei-aIk" secondAttribute="bottom" constant="8" id="Vcm-8i-Ylz"/>
+                                    <constraint firstItem="08J-h5-lwt" firstAttribute="centerX" secondItem="gud-E5-rwY" secondAttribute="centerX" id="Z5M-XG-gBC"/>
+                                    <constraint firstItem="gud-E5-rwY" firstAttribute="top" secondItem="6ZR-gC-lZY" secondAttribute="bottom" constant="8" id="ZQn-mv-ACb"/>
+                                    <constraint firstItem="6ZR-gC-lZY" firstAttribute="leading" secondItem="Fnk-L4-to5" secondAttribute="leading" constant="5" id="bXi-OH-ai4"/>
+                                    <constraint firstItem="6ZR-gC-lZY" firstAttribute="top" secondItem="YWa-MZ-IMl" secondAttribute="bottom" constant="8" id="lgq-po-gN9"/>
+                                    <constraint firstItem="7JQ-Ei-aIk" firstAttribute="top" secondItem="Fnk-L4-to5" secondAttribute="top" constant="12" id="oyF-CS-41J"/>
+                                    <constraint firstItem="6EU-jg-9A7" firstAttribute="top" secondItem="6ZR-gC-lZY" secondAttribute="bottom" constant="8" id="q3J-pK-8n3"/>
+                                    <constraint firstItem="08J-h5-lwt" firstAttribute="width" secondItem="gud-E5-rwY" secondAttribute="width" id="qnI-9u-nnw"/>
+                                    <constraint firstItem="7JQ-Ei-aIk" firstAttribute="leading" secondItem="Fnk-L4-to5" secondAttribute="leading" constant="5" id="uBa-cK-mSF"/>
+                                    <constraint firstAttribute="bottom" secondItem="08J-h5-lwt" secondAttribute="bottom" constant="18" id="xy7-5z-O5U"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPH-1V-x0B">
+                                <rect key="frame" x="157.5" y="0.0" width="30" height="230"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uY7-yc-Y5p">
+                                        <rect key="frame" x="14.5" y="38" width="1" height="50"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="7e6-M9-wej"/>
+                                            <constraint firstAttribute="height" constant="50" id="Ejt-NQ-EG1"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrA-uE-hjO" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="100" width="30" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="xOM-FT-KZM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUe-oa-Krh">
+                                        <rect key="frame" x="14.5" y="142" width="1" height="50"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fE4-1h-VuU"/>
+                                            <constraint firstAttribute="width" constant="1" id="xWQ-4J-RSb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cUe-oa-Krh" firstAttribute="centerX" secondItem="hPH-1V-x0B" secondAttribute="centerX" id="7T3-Bp-9QM"/>
+                                    <constraint firstItem="uY7-yc-Y5p" firstAttribute="centerX" secondItem="hPH-1V-x0B" secondAttribute="centerX" id="7yt-cy-6er"/>
+                                    <constraint firstAttribute="trailing" secondItem="JrA-uE-hjO" secondAttribute="trailing" id="B7Y-xI-Vbu"/>
+                                    <constraint firstItem="JrA-uE-hjO" firstAttribute="centerX" secondItem="hPH-1V-x0B" secondAttribute="centerX" id="EX7-qA-aPw"/>
+                                    <constraint firstAttribute="width" constant="30" id="SUd-05-q0b"/>
+                                    <constraint firstItem="JrA-uE-hjO" firstAttribute="top" secondItem="uY7-yc-Y5p" secondAttribute="bottom" constant="12" id="Vg0-da-15j"/>
+                                    <constraint firstItem="JrA-uE-hjO" firstAttribute="leading" secondItem="hPH-1V-x0B" secondAttribute="leading" id="ajh-Mu-mFo"/>
+                                    <constraint firstItem="JrA-uE-hjO" firstAttribute="centerY" secondItem="hPH-1V-x0B" secondAttribute="centerY" id="cNa-tk-6t5"/>
+                                    <constraint firstItem="cUe-oa-Krh" firstAttribute="top" secondItem="JrA-uE-hjO" secondAttribute="bottom" constant="12" id="eeS-Fh-ItP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKr-MM-dmY">
+                                <rect key="frame" x="187.5" y="0.0" width="157.5" height="230"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nz-Ql-D5c" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="12" width="147.5" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="8bo-c0-wUa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bolt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fAr-gN-sEL">
+                                        <rect key="frame" x="50" y="38" width="58" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="iIE-ze-9B9"/>
+                                            <constraint firstAttribute="width" constant="58" id="liH-9Z-oHT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x20-pB-85O" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="104" width="147.5" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="JkL-Th-cy1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                                        <color key="textColor" red="0.23137254900000001" green="0.40784313729999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJh-b8-WiG" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="34" y="136" width="34" height="34"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.090196078430000007" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="HYq-JG-49v"/>
+                                            <constraint firstAttribute="width" constant="34" id="d2G-7b-Pnq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="-1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnRedMinusClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4ti-Eh-Dgv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrz-Xh-5gr" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="89.5" y="136" width="34" height="34"/>
+                                        <color key="backgroundColor" red="0.043137254899999998" green="0.7843137255" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="34" id="LXm-Gy-QZ6"/>
+                                            <constraint firstAttribute="height" constant="34" id="ybW-Wb-zPf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="+1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnGreenPlusClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nxY-Zh-bOH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeC-fY-aBs" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="34" y="178" width="34" height="34"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.090196078430000007" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="-5">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnRedMinusClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2tv-bz-bpH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmm-vu-CQF" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="89.5" y="178" width="34" height="34"/>
+                                        <color key="backgroundColor" red="0.043137254899999998" green="0.7843137255" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
+                                        <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="+5">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnGreenPlusClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qP6-gx-Xx9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fAr-gN-sEL" firstAttribute="top" secondItem="5Nz-Ql-D5c" secondAttribute="bottom" constant="8" id="5vg-kl-tiv"/>
+                                    <constraint firstItem="Wmm-vu-CQF" firstAttribute="width" secondItem="vrz-Xh-5gr" secondAttribute="width" id="7zC-mq-ja5"/>
+                                    <constraint firstItem="ZeC-fY-aBs" firstAttribute="height" secondItem="yJh-b8-WiG" secondAttribute="height" id="8L2-8y-xQU"/>
+                                    <constraint firstItem="ZeC-fY-aBs" firstAttribute="top" secondItem="yJh-b8-WiG" secondAttribute="bottom" constant="8" id="Cd8-8m-7WP"/>
+                                    <constraint firstItem="vrz-Xh-5gr" firstAttribute="top" secondItem="x20-pB-85O" secondAttribute="bottom" constant="8" id="D7P-cX-2FL"/>
+                                    <constraint firstItem="yJh-b8-WiG" firstAttribute="top" secondItem="x20-pB-85O" secondAttribute="bottom" constant="8" id="F0k-55-drp"/>
+                                    <constraint firstItem="x20-pB-85O" firstAttribute="top" secondItem="fAr-gN-sEL" secondAttribute="bottom" constant="8" id="MMQ-Ds-dXT"/>
+                                    <constraint firstItem="5Nz-Ql-D5c" firstAttribute="leading" secondItem="SKr-MM-dmY" secondAttribute="leading" constant="5" id="PlD-bi-i7o"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZeC-fY-aBs" secondAttribute="bottom" constant="18" id="UQC-2O-VFM"/>
+                                    <constraint firstItem="Wmm-vu-CQF" firstAttribute="height" secondItem="vrz-Xh-5gr" secondAttribute="height" id="VlY-AN-0kF"/>
+                                    <constraint firstItem="vrz-Xh-5gr" firstAttribute="centerX" secondItem="SKr-MM-dmY" secondAttribute="centerX" multiplier="1.35" id="Vme-6h-ecM"/>
+                                    <constraint firstItem="ZeC-fY-aBs" firstAttribute="width" secondItem="yJh-b8-WiG" secondAttribute="width" id="XEY-V8-eRx"/>
+                                    <constraint firstItem="ZeC-fY-aBs" firstAttribute="centerX" secondItem="yJh-b8-WiG" secondAttribute="centerX" id="Y7F-tQ-g8X"/>
+                                    <constraint firstItem="5Nz-Ql-D5c" firstAttribute="top" secondItem="SKr-MM-dmY" secondAttribute="top" constant="12" id="Z6L-Gn-bh4"/>
+                                    <constraint firstItem="yJh-b8-WiG" firstAttribute="centerX" secondItem="SKr-MM-dmY" secondAttribute="centerX" multiplier="0.65" id="ZQp-c1-Cu5"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="g8M-Sy-zNX"/>
+                                    <constraint firstItem="x20-pB-85O" firstAttribute="leading" secondItem="SKr-MM-dmY" secondAttribute="leading" constant="5" id="oTf-JT-2qN"/>
+                                    <constraint firstAttribute="trailing" secondItem="x20-pB-85O" secondAttribute="trailing" constant="5" id="pm1-ts-1zf"/>
+                                    <constraint firstItem="fAr-gN-sEL" firstAttribute="centerX" secondItem="SKr-MM-dmY" secondAttribute="centerX" id="qWv-TD-k1g"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Nz-Ql-D5c" secondAttribute="trailing" constant="5" id="uhz-jG-Shk"/>
+                                    <constraint firstItem="Wmm-vu-CQF" firstAttribute="top" secondItem="vrz-Xh-5gr" secondAttribute="bottom" constant="8" id="x7W-f3-F1o"/>
+                                    <constraint firstItem="Wmm-vu-CQF" firstAttribute="centerX" secondItem="vrz-Xh-5gr" secondAttribute="centerX" id="yKd-Fi-erf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fnk-L4-to5" firstAttribute="leading" secondItem="Dmb-v1-GRg" secondAttribute="leading" id="1HN-MO-cQB"/>
+                            <constraint firstItem="SKr-MM-dmY" firstAttribute="leading" secondItem="hPH-1V-x0B" secondAttribute="trailing" id="5IL-Yt-7jk"/>
+                            <constraint firstAttribute="bottom" secondItem="hPH-1V-x0B" secondAttribute="bottom" id="6XS-Ta-TpJ"/>
+                            <constraint firstItem="SKr-MM-dmY" firstAttribute="top" secondItem="Dmb-v1-GRg" secondAttribute="top" id="C95-Gv-o0g"/>
+                            <constraint firstAttribute="trailing" secondItem="SKr-MM-dmY" secondAttribute="trailing" id="ImC-W8-A5G"/>
+                            <constraint firstAttribute="bottom" secondItem="Fnk-L4-to5" secondAttribute="bottom" id="UfA-FZ-CuJ"/>
+                            <constraint firstItem="hPH-1V-x0B" firstAttribute="centerX" secondItem="Dmb-v1-GRg" secondAttribute="centerX" id="V5M-0z-y3m"/>
+                            <constraint firstAttribute="bottom" secondItem="SKr-MM-dmY" secondAttribute="bottom" id="Vrf-hs-MYJ"/>
+                            <constraint firstItem="Fnk-L4-to5" firstAttribute="top" secondItem="Dmb-v1-GRg" secondAttribute="top" id="cSR-gl-xE4"/>
+                            <constraint firstItem="hPH-1V-x0B" firstAttribute="top" secondItem="Dmb-v1-GRg" secondAttribute="top" id="dOZ-IL-p8s"/>
+                            <constraint firstItem="hPH-1V-x0B" firstAttribute="leading" secondItem="Fnk-L4-to5" secondAttribute="trailing" id="jlp-86-shn"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="tIw-Gj-44y"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eOn-Cc-E0V" secondAttribute="trailing" constant="15" id="1zz-EG-Lt1"/>
+                    <constraint firstItem="eOn-Cc-E0V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="83i-QH-55n"/>
+                    <constraint firstItem="Dmb-v1-GRg" firstAttribute="top" secondItem="eOn-Cc-E0V" secondAttribute="bottom" constant="15" id="Ku1-PK-tLh"/>
+                    <constraint firstAttribute="bottom" secondItem="Dmb-v1-GRg" secondAttribute="bottom" constant="17.5" id="Nt7-FS-hnw"/>
+                    <constraint firstAttribute="trailing" secondItem="Dmb-v1-GRg" secondAttribute="trailing" constant="15" id="T87-P7-Uxr"/>
+                    <constraint firstItem="eOn-Cc-E0V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="e1Q-jZ-lMf"/>
+                    <constraint firstItem="Dmb-v1-GRg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="fzm-ht-uT5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnFirstGreenBottom" destination="sxl-Yt-yP5" id="db9-Re-Tok"/>
+                <outlet property="btnFirstGreenTop" destination="6EU-jg-9A7" id="c5R-56-cX3"/>
+                <outlet property="btnFirstRedBottom" destination="08J-h5-lwt" id="2A8-gV-f0n"/>
+                <outlet property="btnFirstRedTop" destination="gud-E5-rwY" id="5Fh-vx-LjI"/>
+                <outlet property="btnSecondGreenBottom" destination="Wmm-vu-CQF" id="PR3-aI-aAy"/>
+                <outlet property="btnSecondGreenTop" destination="vrz-Xh-5gr" id="4NI-k1-iMA"/>
+                <outlet property="btnSecondRedBottom" destination="ZeC-fY-aBs" id="yfB-dt-boN"/>
+                <outlet property="btnSecondRedTop" destination="yJh-b8-WiG" id="pp3-Dl-iMk"/>
+                <outlet property="imgPlayerFirst" destination="YWa-MZ-IMl" id="Ot7-Fl-yEY"/>
+                <outlet property="imgPlayerSecond" destination="fAr-gN-sEL" id="doo-ft-Ycu"/>
+                <outlet property="lblPointFirstPlayer" destination="6ZR-gC-lZY" id="5ui-Cm-efY"/>
+                <outlet property="lblPointSecondPlayer" destination="x20-pB-85O" id="lTC-PE-Dvl"/>
+                <outlet property="lblVS" destination="JrA-uE-hjO" id="CjG-WC-fwu"/>
+            </connections>
+            <point key="canvasLocation" x="132.80000000000001" y="289.65517241379314"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bolt.jpg" width="647" height="404"/>
+    </resources>
+</document>

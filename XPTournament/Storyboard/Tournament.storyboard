@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Light.otf">
+            <string>Poppins-Light</string>
+        </array>
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.otf">
+            <string>Poppins-SemiBold</string>
+        </array>
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tournament View Controller-->
+        <scene sceneID="omi-dN-Re3">
+            <objects>
+                <viewController storyboardIdentifier="TournamentViewController" id="a1p-Yr-vUn" customClass="TournamentViewController" customModule="XPTournament" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="2" contentMode="scaleToFill" id="Thu-Ky-dTD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wwh-aX-eVd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TournamentTblCell" rowHeight="415" id="lpE-Yn-oCJ" customClass="TournamentTblCell" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="415"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lpE-Yn-oCJ" id="odu-bj-CSm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="415"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Tournament" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxt-UI-btT" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="26" width="143.66666666666666" height="25.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
+                                                    <color key="textColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8J-f9-9Zf" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                                    <rect key="frame" x="285" y="20.666666666666671" width="75" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="75" id="TGX-Lx-Fa0"/>
+                                                        <constraint firstAttribute="height" constant="36" id="lEA-Ti-f4F"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="13"/>
+                                                    <state key="normal" title="View all">
+                                                        <color key="titleColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                </button>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Ow-o8-7Va">
+                                                    <rect key="frame" x="0.0" y="66.666666666666657" width="375" height="323.33333333333337"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8bt-k1-5be">
+                                                        <size key="itemSize" width="50" height="50"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="7" minY="0.0" maxX="7" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TournamentCollCell" id="hF7-Cz-AFu" customClass="TournamentCollCell" customModule="XPTournament" customModuleProvider="target">
+                                                            <rect key="frame" x="7" y="3.3333333333333335" width="320" height="317"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="317"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <view tag="102" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0t-HR-3Au" customClass="MIGenericView" customModule="XPTournament" customModuleProvider="target">
+                                                                        <rect key="frame" x="5" y="8" width="310" height="301"/>
+                                                                        <subviews>
+                                                                            <view clipsSubviews="YES" tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10I-Fh-CgD" customClass="MIGenericView" customModule="XPTournament" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="310" height="301"/>
+                                                                                <subviews>
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1.png" translatesAutoresizingMaskIntoConstraints="NO" id="aZs-AR-G2l">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="310" height="155"/>
+                                                                                        <color key="backgroundColor" white="0.84999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" secondItem="aZs-AR-G2l" secondAttribute="height" multiplier="2:1" id="D5I-Ab-Myr"/>
+                                                                                        </constraints>
+                                                                                    </imageView>
+                                                                                    <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08F-iM-3Pi" customClass="MIGenericView" customModule="XPTournament" customModuleProvider="target">
+                                                                                        <rect key="frame" x="251.33333333333329" y="117" width="48.666666666666657" height="28"/>
+                                                                                        <subviews>
+                                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oM-3u-a8L" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                                                                <rect key="frame" x="10.000000000000002" y="5" width="28.666666666666671" height="18"/>
+                                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
+                                                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                <nil key="highlightedColor"/>
+                                                                                            </label>
+                                                                                            <view tag="103" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzF-sr-4Ps" customClass="MIGenericView" customModule="XPTournament" customModuleProvider="target">
+                                                                                                <rect key="frame" x="39.666666666666686" y="5" width="4" height="4"/>
+                                                                                                <color key="backgroundColor" red="0.92156862745098034" green="0.12549019607843137" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="height" constant="4" id="Npq-ry-q4b"/>
+                                                                                                    <constraint firstAttribute="width" constant="4" id="Yz1-aH-yuM"/>
+                                                                                                </constraints>
+                                                                                            </view>
+                                                                                        </subviews>
+                                                                                        <color key="backgroundColor" red="0.23137254901960785" green="0.40784313725490196" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="trailing" secondItem="5oM-3u-a8L" secondAttribute="trailing" constant="10" id="0wj-nV-XDJ"/>
+                                                                                            <constraint firstItem="5oM-3u-a8L" firstAttribute="leading" secondItem="08F-iM-3Pi" secondAttribute="leading" constant="10" id="8CT-sM-bgi"/>
+                                                                                            <constraint firstItem="uzF-sr-4Ps" firstAttribute="top" secondItem="5oM-3u-a8L" secondAttribute="top" id="8Pz-FC-q8F"/>
+                                                                                            <constraint firstItem="5oM-3u-a8L" firstAttribute="top" secondItem="08F-iM-3Pi" secondAttribute="top" constant="5" id="SHV-Zc-ANd"/>
+                                                                                            <constraint firstAttribute="bottom" secondItem="5oM-3u-a8L" secondAttribute="bottom" constant="5" id="ez4-cI-tHC"/>
+                                                                                            <constraint firstItem="uzF-sr-4Ps" firstAttribute="trailing" secondItem="5oM-3u-a8L" secondAttribute="trailing" constant="5" id="tES-d2-XCe"/>
+                                                                                        </constraints>
+                                                                                        <userDefinedRuntimeAttributes>
+                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                                                <real key="value" value="6"/>
+                                                                                            </userDefinedRuntimeAttribute>
+                                                                                        </userDefinedRuntimeAttributes>
+                                                                                    </view>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tougeki – Super Battle Opera" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqS-27-bWE" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                                                        <rect key="frame" x="10" y="165" width="222.33333333333334" height="21"/>
+                                                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
+                                                                                        <color key="textColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swiss Type Tournament" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dV5-To-c0W" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                                                        <rect key="frame" x="10" y="196" width="177" height="21"/>
+                                                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                                                                        <color key="textColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="iek-Rn-jCs">
+                                                                                        <rect key="frame" x="10" y="230.33333333333334" width="12" height="12"/>
+                                                                                    </imageView>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ig-QF-jsk" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                                                        <rect key="frame" x="27.000000000000004" y="227" width="33.333333333333343" height="18.333333333333343"/>
+                                                                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="13"/>
+                                                                                        <color key="textColor" red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Oct. 2018" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXV-8Q-VlZ" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                                                        <rect key="frame" x="65.333333333333329" y="227" width="70.999999999999986" height="18.333333333333343"/>
+                                                                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="13"/>
+                                                                                        <color key="textColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clock" translatesAutoresizingMaskIntoConstraints="NO" id="sOu-a7-UpY">
+                                                                                        <rect key="frame" x="173.33333333333334" y="229.33333333333334" width="13" height="14"/>
+                                                                                    </imageView>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bs-j7-eJf" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                                                        <rect key="frame" x="191.33333333333334" y="227" width="33.666666666666657" height="18.333333333333343"/>
+                                                                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="13"/>
+                                                                                        <color key="textColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Oct. 2018" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxz-Z6-BkZ" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                                                        <rect key="frame" x="229" y="227" width="71" height="18.333333333333343"/>
+                                                                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="13"/>
+                                                                                        <color key="textColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img2.png" translatesAutoresizingMaskIntoConstraints="NO" id="cX2-2L-m72">
+                                                                                        <rect key="frame" x="10" y="260.33333333333331" width="30" height="30"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="height" constant="30" id="vtX-52-Uaf"/>
+                                                                                            <constraint firstAttribute="width" constant="30" id="wCH-1Z-cB7"/>
+                                                                                        </constraints>
+                                                                                    </imageView>
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img3.png" translatesAutoresizingMaskIntoConstraints="NO" id="KmP-Pf-6hL">
+                                                                                        <rect key="frame" x="25.666666666666671" y="260.33333333333331" width="30" height="30"/>
+                                                                                    </imageView>
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img3.png" translatesAutoresizingMaskIntoConstraints="NO" id="qe4-ed-vUZ">
+                                                                                        <rect key="frame" x="40.666666666666664" y="260.33333333333331" width="29.999999999999993" height="30"/>
+                                                                                    </imageView>
+                                                                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czT-Gb-s3e" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                                                                        <rect key="frame" x="55.666666666666657" y="260.33333333333331" width="30" height="30"/>
+                                                                                        <color key="backgroundColor" red="0.14509803921568626" green="0.20392156862745098" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
+                                                                                        <state key="normal" title="3+">
+                                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                        </state>
+                                                                                    </button>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entry Fee:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcI-ai-6bl" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                                                        <rect key="frame" x="210.33333333333334" y="266" width="60.000000000000028" height="18.333333333333314"/>
+                                                                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="13"/>
+                                                                                        <color key="textColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78O-Ou-hy6" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                                                        <rect key="frame" x="275.33333333333331" y="266" width="24.666666666666686" height="18.333333333333314"/>
+                                                                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
+                                                                                        <color key="textColor" red="0.23137254900000001" green="0.40784313729999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <constraints>
+                                                                                    <constraint firstItem="KmP-Pf-6hL" firstAttribute="leading" secondItem="cX2-2L-m72" secondAttribute="trailing" constant="-14.5" id="0kt-wX-d5Z"/>
+                                                                                    <constraint firstItem="8ig-QF-jsk" firstAttribute="leading" secondItem="iek-Rn-jCs" secondAttribute="trailing" constant="5" id="3Te-SL-pNn"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="08F-iM-3Pi" secondAttribute="trailing" constant="10" id="4eZ-FI-b14"/>
+                                                                                    <constraint firstItem="KmP-Pf-6hL" firstAttribute="centerY" secondItem="cX2-2L-m72" secondAttribute="centerY" id="5D8-hJ-rka"/>
+                                                                                    <constraint firstItem="8ig-QF-jsk" firstAttribute="top" secondItem="dV5-To-c0W" secondAttribute="bottom" constant="10" id="5Mi-ah-DCJ"/>
+                                                                                    <constraint firstItem="qe4-ed-vUZ" firstAttribute="height" secondItem="KmP-Pf-6hL" secondAttribute="height" id="6rl-FE-5IV"/>
+                                                                                    <constraint firstItem="cX2-2L-m72" firstAttribute="leading" secondItem="10I-Fh-CgD" secondAttribute="leading" constant="10" id="9Ql-kM-Z0g"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="78O-Ou-hy6" secondAttribute="trailing" constant="10" id="EFH-ib-Nki"/>
+                                                                                    <constraint firstItem="aZs-AR-G2l" firstAttribute="leading" secondItem="10I-Fh-CgD" secondAttribute="leading" id="HWZ-tb-EMC"/>
+                                                                                    <constraint firstItem="czT-Gb-s3e" firstAttribute="centerY" secondItem="qe4-ed-vUZ" secondAttribute="centerY" id="LhP-y6-NSg"/>
+                                                                                    <constraint firstItem="KmP-Pf-6hL" firstAttribute="width" secondItem="cX2-2L-m72" secondAttribute="width" id="MDz-XB-fYZ"/>
+                                                                                    <constraint firstItem="qe4-ed-vUZ" firstAttribute="leading" secondItem="KmP-Pf-6hL" secondAttribute="trailing" constant="-15" id="T1x-sR-z3I"/>
+                                                                                    <constraint firstItem="qe4-ed-vUZ" firstAttribute="width" secondItem="KmP-Pf-6hL" secondAttribute="width" id="Tv7-1u-Tlv"/>
+                                                                                    <constraint firstItem="78O-Ou-hy6" firstAttribute="centerY" secondItem="DcI-ai-6bl" secondAttribute="centerY" id="Wip-aQ-r5W"/>
+                                                                                    <constraint firstItem="dV5-To-c0W" firstAttribute="leading" secondItem="BqS-27-bWE" secondAttribute="leading" id="X5F-cI-0cy"/>
+                                                                                    <constraint firstItem="KmP-Pf-6hL" firstAttribute="height" secondItem="cX2-2L-m72" secondAttribute="height" id="Xrj-nc-Epr"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="wxz-Z6-BkZ" secondAttribute="trailing" constant="10" id="akv-d5-7NI"/>
+                                                                                    <constraint firstItem="czT-Gb-s3e" firstAttribute="width" secondItem="qe4-ed-vUZ" secondAttribute="width" id="caM-If-eTm"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="aZs-AR-G2l" secondAttribute="trailing" id="d7s-Cf-jB2"/>
+                                                                                    <constraint firstItem="wxz-Z6-BkZ" firstAttribute="leading" secondItem="7bs-j7-eJf" secondAttribute="trailing" constant="4" id="eev-Sv-tfs"/>
+                                                                                    <constraint firstItem="qe4-ed-vUZ" firstAttribute="centerY" secondItem="KmP-Pf-6hL" secondAttribute="centerY" id="fDp-Ka-YUn"/>
+                                                                                    <constraint firstItem="aZs-AR-G2l" firstAttribute="top" secondItem="10I-Fh-CgD" secondAttribute="top" id="fxy-5s-c8a"/>
+                                                                                    <constraint firstItem="08F-iM-3Pi" firstAttribute="bottom" secondItem="aZs-AR-G2l" secondAttribute="bottom" constant="-10" id="fyM-mY-Elb"/>
+                                                                                    <constraint firstItem="7bs-j7-eJf" firstAttribute="centerY" secondItem="sOu-a7-UpY" secondAttribute="centerY" id="g4i-96-e5Y"/>
+                                                                                    <constraint firstItem="OXV-8Q-VlZ" firstAttribute="leading" secondItem="8ig-QF-jsk" secondAttribute="trailing" constant="5" id="g5q-yk-z5b"/>
+                                                                                    <constraint firstItem="BqS-27-bWE" firstAttribute="top" secondItem="aZs-AR-G2l" secondAttribute="bottom" constant="10" id="heI-To-zZQ"/>
+                                                                                    <constraint firstItem="iek-Rn-jCs" firstAttribute="leading" secondItem="dV5-To-c0W" secondAttribute="leading" id="jxj-a7-hHN"/>
+                                                                                    <constraint firstItem="BqS-27-bWE" firstAttribute="leading" secondItem="10I-Fh-CgD" secondAttribute="leading" constant="10" id="lW2-XK-fqg"/>
+                                                                                    <constraint firstItem="czT-Gb-s3e" firstAttribute="height" secondItem="qe4-ed-vUZ" secondAttribute="height" id="lpS-Tv-fOj"/>
+                                                                                    <constraint firstItem="78O-Ou-hy6" firstAttribute="leading" secondItem="DcI-ai-6bl" secondAttribute="trailing" constant="5" id="maE-za-qpM"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="cX2-2L-m72" secondAttribute="bottom" constant="10.67" id="oTq-qX-2fT"/>
+                                                                                    <constraint firstItem="czT-Gb-s3e" firstAttribute="leading" secondItem="qe4-ed-vUZ" secondAttribute="trailing" constant="-15" id="oqX-Fq-yfA"/>
+                                                                                    <constraint firstItem="dV5-To-c0W" firstAttribute="top" secondItem="BqS-27-bWE" secondAttribute="bottom" constant="10" id="oth-S7-fpf"/>
+                                                                                    <constraint firstItem="7bs-j7-eJf" firstAttribute="leading" secondItem="sOu-a7-UpY" secondAttribute="trailing" constant="5" id="pbK-gQ-eQa"/>
+                                                                                    <constraint firstItem="sOu-a7-UpY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OXV-8Q-VlZ" secondAttribute="trailing" constant="10" id="qoh-bB-dSJ"/>
+                                                                                    <constraint firstItem="DcI-ai-6bl" firstAttribute="centerY" secondItem="czT-Gb-s3e" secondAttribute="centerY" id="rWl-SH-u0S"/>
+                                                                                    <constraint firstItem="wxz-Z6-BkZ" firstAttribute="centerY" secondItem="7bs-j7-eJf" secondAttribute="centerY" id="rZd-WN-1f7"/>
+                                                                                    <constraint firstItem="sOu-a7-UpY" firstAttribute="centerY" secondItem="OXV-8Q-VlZ" secondAttribute="centerY" id="t0t-7Q-QlA"/>
+                                                                                    <constraint firstItem="OXV-8Q-VlZ" firstAttribute="centerY" secondItem="8ig-QF-jsk" secondAttribute="centerY" id="tBh-Qg-X9d"/>
+                                                                                    <constraint firstItem="iek-Rn-jCs" firstAttribute="centerY" secondItem="8ig-QF-jsk" secondAttribute="centerY" id="uwS-Xz-2fh"/>
+                                                                                </constraints>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                                        <real key="value" value="10"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </view>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="10I-Fh-CgD" firstAttribute="leading" secondItem="f0t-HR-3Au" secondAttribute="leading" id="3Jc-qE-XYq"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="10I-Fh-CgD" secondAttribute="bottom" id="Oc7-G6-dkM"/>
+                                                                            <constraint firstItem="10I-Fh-CgD" firstAttribute="top" secondItem="f0t-HR-3Au" secondAttribute="top" id="ei7-ge-aIk"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="10I-Fh-CgD" secondAttribute="trailing" id="xKz-l2-rd4"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                                <real key="value" value="10"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                </subviews>
+                                                            </view>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="f0t-HR-3Au" secondAttribute="trailing" constant="5" id="4kt-Su-fpt"/>
+                                                                <constraint firstItem="f0t-HR-3Au" firstAttribute="leading" secondItem="hF7-Cz-AFu" secondAttribute="leading" constant="5" id="5Zr-o9-BnC"/>
+                                                                <constraint firstItem="f0t-HR-3Au" firstAttribute="top" secondItem="hF7-Cz-AFu" secondAttribute="top" constant="8" id="pvi-pW-3MF"/>
+                                                                <constraint firstAttribute="bottom" secondItem="f0t-HR-3Au" secondAttribute="bottom" constant="8" id="vr3-J4-a3u"/>
+                                                            </constraints>
+                                                            <viewLayoutGuide key="safeArea" id="VQD-X3-Z5M"/>
+                                                            <size key="customSize" width="320" height="317"/>
+                                                            <connections>
+                                                                <outlet property="btnCount" destination="czT-Gb-s3e" id="YTM-U4-CyM"/>
+                                                                <outlet property="imgVTournament" destination="aZs-AR-G2l" id="R05-8y-mCW"/>
+                                                                <outlet property="imgVUser1" destination="cX2-2L-m72" id="Mfp-hX-nRB"/>
+                                                                <outlet property="imgVUser2" destination="KmP-Pf-6hL" id="YuG-bx-hFf"/>
+                                                                <outlet property="imgVUser3" destination="qe4-ed-vUZ" id="2wB-T3-jpW"/>
+                                                                <outlet property="lblDate" destination="OXV-8Q-VlZ" id="c1h-ZV-eWD"/>
+                                                                <outlet property="lblEntryFee" destination="78O-Ou-hy6" id="veX-0e-cJ8"/>
+                                                                <outlet property="lblEntryFeeTxt" destination="DcI-ai-6bl" id="She-T8-Cxu"/>
+                                                                <outlet property="lblStatus" destination="5oM-3u-a8L" id="Iif-P7-nFO"/>
+                                                                <outlet property="lblTime" destination="wxz-Z6-BkZ" id="ggh-4J-nJm"/>
+                                                                <outlet property="lblTournamentName" destination="BqS-27-bWE" id="Gft-do-5vI"/>
+                                                                <outlet property="lblTournamentType" destination="dV5-To-c0W" id="ye2-do-N00"/>
+                                                                <outlet property="viewTournamentStatus" destination="08F-iM-3Pi" id="i0W-3T-h35"/>
+                                                                <outlet property="vwLiveDot" destination="uzF-sr-4Ps" id="B8d-Ut-eaB"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="lpE-Yn-oCJ" id="Dua-30-deY"/>
+                                                        <outlet property="delegate" destination="lpE-Yn-oCJ" id="b4d-yy-9db"/>
+                                                    </connections>
+                                                </collectionView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eus-Ua-CzC">
+                                                    <rect key="frame" x="15" y="414" width="345" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="qKv-ZU-Edl"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="D8J-f9-9Zf" secondAttribute="trailing" constant="15" id="14I-gf-QR7"/>
+                                                <constraint firstItem="Pxt-UI-btT" firstAttribute="leading" secondItem="odu-bj-CSm" secondAttribute="leading" constant="15" id="1Jb-vA-4fR"/>
+                                                <constraint firstItem="9Ow-o8-7Va" firstAttribute="top" secondItem="D8J-f9-9Zf" secondAttribute="bottom" constant="10" id="F4s-lx-OTM"/>
+                                                <constraint firstAttribute="bottom" secondItem="9Ow-o8-7Va" secondAttribute="bottom" constant="25" id="H8E-d4-gTk"/>
+                                                <constraint firstItem="D8J-f9-9Zf" firstAttribute="centerY" secondItem="Pxt-UI-btT" secondAttribute="centerY" id="L1W-OA-0R4"/>
+                                                <constraint firstItem="Pxt-UI-btT" firstAttribute="top" secondItem="odu-bj-CSm" secondAttribute="top" constant="26" id="Lmc-qA-xjr"/>
+                                                <constraint firstAttribute="trailing" secondItem="Eus-Ua-CzC" secondAttribute="trailing" constant="15" id="SnX-GI-B8F"/>
+                                                <constraint firstAttribute="bottom" secondItem="Eus-Ua-CzC" secondAttribute="bottom" id="e2H-KD-LvH"/>
+                                                <constraint firstAttribute="trailing" secondItem="9Ow-o8-7Va" secondAttribute="trailing" id="fjE-M7-NAz"/>
+                                                <constraint firstItem="Eus-Ua-CzC" firstAttribute="leading" secondItem="odu-bj-CSm" secondAttribute="leading" constant="15" id="m3z-xl-IxJ"/>
+                                                <constraint firstItem="9Ow-o8-7Va" firstAttribute="leading" secondItem="odu-bj-CSm" secondAttribute="leading" id="vXJ-3o-EUY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnViewAll" destination="D8J-f9-9Zf" id="fdc-U2-I8T"/>
+                                            <outlet property="collVTournament" destination="9Ow-o8-7Va" id="yVX-e2-AYK"/>
+                                            <outlet property="lblTitleName" destination="Pxt-UI-btT" id="F3P-hu-WjT"/>
+                                            <outlet property="vwSperatorLine" destination="Eus-Ua-CzC" id="8oP-ba-4wh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="a1p-Yr-vUn" id="Jhm-iL-cbn"/>
+                                    <outlet property="delegate" destination="a1p-Yr-vUn" id="9xM-8K-RTL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Wwh-aX-eVd" firstAttribute="trailing" secondItem="3pG-7g-WWz" secondAttribute="trailing" id="GhJ-TY-CzX"/>
+                            <constraint firstItem="3pG-7g-WWz" firstAttribute="bottom" secondItem="Wwh-aX-eVd" secondAttribute="bottom" constant="49" id="YBG-zy-eby"/>
+                            <constraint firstItem="Wwh-aX-eVd" firstAttribute="leading" secondItem="3pG-7g-WWz" secondAttribute="leading" id="o6X-Ue-56z"/>
+                            <constraint firstItem="Wwh-aX-eVd" firstAttribute="top" secondItem="Thu-Ky-dTD" secondAttribute="top" id="wnm-iP-HRt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3pG-7g-WWz"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblVTournament" destination="Wwh-aX-eVd" id="lpg-wr-FK0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0JI-EO-3T9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="150.73891625615764"/>
+        </scene>
+        <!--Tournament Search View Controller-->
+        <scene sceneID="bQh-I0-fxe">
+            <objects>
+                <viewController storyboardIdentifier="TournamentSearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vtL-5P-3ye" customClass="TournamentSearchViewController" customModule="XPTournament" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="4" contentMode="scaleToFill" id="7cT-MP-fOA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="mCq-QI-dW9">
+                                <rect key="frame" x="0.0" y="61" width="375" height="717"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TournamentSearchTblCell" id="zbV-hK-fAH" customClass="TournamentSearchTblCell" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1" width="375" height="170"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zbV-hK-fAH" id="NDg-Ut-GN3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKD-zX-9jp" customClass="MIGenericView" customModule="XPTournament" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="11" width="343" height="149"/>
+                                                    <subviews>
+                                                        <view clipsSubviews="YES" tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLk-u0-RBs" customClass="MIGenericView" customModule="XPTournament" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="10" width="99.333333333333329" height="128.33333333333334"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wne-cq-KAJ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="99.333333333333329" height="128.33333333333334"/>
+                                                                    <color key="backgroundColor" white="0.84552890258215951" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCC-sm-Q8z" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="103.33333333333333" width="99.333333333333329" height="24.999999999999986"/>
+                                                                    <color key="backgroundColor" red="0.18431372549019609" green="0.36078431372549019" blue="0.93333333333333335" alpha="0.9005511558219178" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="25" id="5C4-W3-aWs"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="wCC-sm-Q8z" secondAttribute="trailing" id="B3t-25-Mxw"/>
+                                                                <constraint firstAttribute="width" secondItem="eLk-u0-RBs" secondAttribute="height" multiplier="99:128" id="KdT-mE-WAa"/>
+                                                                <constraint firstAttribute="bottom" secondItem="wCC-sm-Q8z" secondAttribute="bottom" id="OeC-2y-AnX"/>
+                                                                <constraint firstItem="wCC-sm-Q8z" firstAttribute="leading" secondItem="eLk-u0-RBs" secondAttribute="leading" id="YUl-F9-Lt3"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Wne-cq-KAJ" secondAttribute="bottom" id="eKY-GX-sPC"/>
+                                                                <constraint firstItem="Wne-cq-KAJ" firstAttribute="top" secondItem="eLk-u0-RBs" secondAttribute="top" id="hkc-80-Wgg"/>
+                                                                <constraint firstItem="Wne-cq-KAJ" firstAttribute="leading" secondItem="eLk-u0-RBs" secondAttribute="leading" id="sIg-cX-ZzE"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Wne-cq-KAJ" secondAttribute="trailing" id="w0i-s1-3Zd"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Tougeki – Super Battle..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFl-hy-bC6" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                            <rect key="frame" x="121.33333333333333" y="12.000000000000002" width="188.33333333333337" height="22.666666666666671"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
+                                                            <color key="textColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="Swiss Type Tournament" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQL-3c-pKA" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                            <rect key="frame" x="121.33333333333336" y="46.666666666666664" width="151.66666666666663" height="24.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="13"/>
+                                                            <color key="textColor" red="0.6705882352941176" green="0.6705882352941176" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="cGe-Pd-5Ss">
+                                                            <rect key="frame" x="121.33333333333334" y="87.666666666666671" width="12" height="12"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 Oct. 2018" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5N-vy-Lpl" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                            <rect key="frame" x="140.33333333333334" y="83.333333333333329" width="82" height="21"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
+                                                            <color key="textColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clock" translatesAutoresizingMaskIntoConstraints="NO" id="Nkd-sC-lgt">
+                                                            <rect key="frame" x="252.66666666666669" y="86.666666666666671" width="13" height="14"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk3-qp-IO9" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                            <rect key="frame" x="272.66666666666669" y="83.333333333333329" width="60.333333333333314" height="21"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
+                                                            <color key="textColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img2.png" translatesAutoresizingMaskIntoConstraints="NO" id="6fY-hR-O7X">
+                                                            <rect key="frame" x="121.33333333333334" y="116.66666666666667" width="22" height="22.000000000000014"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img3.png" translatesAutoresizingMaskIntoConstraints="NO" id="KK4-pg-ukS">
+                                                            <rect key="frame" x="132.33333333333334" y="116.66666666666667" width="22" height="22.000000000000014"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img5.png" translatesAutoresizingMaskIntoConstraints="NO" id="AJr-qw-ZCP">
+                                                            <rect key="frame" x="143.33333333333334" y="116.66666666666667" width="22" height="22.000000000000014"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </imageView>
+                                                        <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqJ-OF-cH1" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                                            <rect key="frame" x="154.33333333333334" y="116.66666666666667" width="22" height="22.000000000000014"/>
+                                                            <color key="backgroundColor" red="0.14509803921568626" green="0.20392156862745098" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="22" id="L1v-dI-rRA"/>
+                                                                <constraint firstAttribute="height" constant="22" id="aOh-yg-jfb"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="10"/>
+                                                            <state key="normal" title="+30">
+                                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entry Fee: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tq-zS-apA" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                            <rect key="frame" x="226.66666666666666" y="117.33333333333334" width="73.333333333333343" height="21"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
+                                                            <color key="textColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMj-Ec-j9J" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                            <rect key="frame" x="304" y="117.33333333333334" width="28.333333333333314" height="21"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
+                                                            <color key="textColor" red="0.23137254901960785" green="0.40784313725490196" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="VqJ-OF-cH1" firstAttribute="width" secondItem="AJr-qw-ZCP" secondAttribute="width" id="06w-9M-P2J"/>
+                                                        <constraint firstItem="8tq-zS-apA" firstAttribute="top" secondItem="w5N-vy-Lpl" secondAttribute="bottom" multiplier="1.125" id="0Fa-Dg-91d"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GMj-Ec-j9J" secondAttribute="trailing" constant="10" id="0QC-0l-Ht8"/>
+                                                        <constraint firstItem="KK4-pg-ukS" firstAttribute="leading" secondItem="6fY-hR-O7X" secondAttribute="trailing" constant="-11" id="1Wd-xb-Jjd"/>
+                                                        <constraint firstItem="cGe-Pd-5Ss" firstAttribute="leading" secondItem="uFl-hy-bC6" secondAttribute="leading" id="5lZ-wM-y0I"/>
+                                                        <constraint firstItem="uFl-hy-bC6" firstAttribute="top" secondItem="aKD-zX-9jp" secondAttribute="top" constant="12" id="7ub-bA-hAf"/>
+                                                        <constraint firstItem="KK4-pg-ukS" firstAttribute="width" secondItem="AJr-qw-ZCP" secondAttribute="width" id="8OA-qF-NLp"/>
+                                                        <constraint firstItem="KK4-pg-ukS" firstAttribute="centerY" secondItem="AJr-qw-ZCP" secondAttribute="centerY" id="8jU-fC-JjM"/>
+                                                        <constraint firstAttribute="trailing" secondItem="GMj-Ec-j9J" secondAttribute="trailing" constant="10.67" id="9dw-C3-Dff"/>
+                                                        <constraint firstItem="eLk-u0-RBs" firstAttribute="top" secondItem="aKD-zX-9jp" secondAttribute="top" constant="10" id="C0i-cJ-el9"/>
+                                                        <constraint firstItem="VqJ-OF-cH1" firstAttribute="centerY" secondItem="GMj-Ec-j9J" secondAttribute="centerY" id="D6F-dZ-HMN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="eLk-u0-RBs" secondAttribute="bottom" constant="10.67" id="Dsk-2G-vbQ"/>
+                                                        <constraint firstItem="8tq-zS-apA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VqJ-OF-cH1" secondAttribute="trailing" constant="10" id="FGT-AA-5r1"/>
+                                                        <constraint firstItem="KK4-pg-ukS" firstAttribute="height" secondItem="AJr-qw-ZCP" secondAttribute="height" id="Fvd-2h-Nqt"/>
+                                                        <constraint firstItem="6fY-hR-O7X" firstAttribute="centerY" secondItem="KK4-pg-ukS" secondAttribute="centerY" id="Fxu-88-Urm"/>
+                                                        <constraint firstItem="6fY-hR-O7X" firstAttribute="height" secondItem="KK4-pg-ukS" secondAttribute="height" id="HPc-MK-oYg"/>
+                                                        <constraint firstItem="Nkd-sC-lgt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="w5N-vy-Lpl" secondAttribute="trailing" constant="10" id="KMY-lx-L9i"/>
+                                                        <constraint firstItem="w5N-vy-Lpl" firstAttribute="top" secondItem="XQL-3c-pKA" secondAttribute="bottom" multiplier="1.16901" id="NIS-LL-i85"/>
+                                                        <constraint firstItem="AJr-qw-ZCP" firstAttribute="leading" secondItem="KK4-pg-ukS" secondAttribute="trailing" constant="-11" id="Pmw-hl-dYc"/>
+                                                        <constraint firstItem="cGe-Pd-5Ss" firstAttribute="centerY" secondItem="w5N-vy-Lpl" secondAttribute="centerY" id="RBz-0f-h3g"/>
+                                                        <constraint firstItem="6fY-hR-O7X" firstAttribute="width" secondItem="KK4-pg-ukS" secondAttribute="width" id="Sef-cq-tbZ"/>
+                                                        <constraint firstItem="uFl-hy-bC6" firstAttribute="leading" secondItem="XQL-3c-pKA" secondAttribute="leading" id="WvW-Qc-r4u"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XQL-3c-pKA" secondAttribute="trailing" constant="10" id="Xlo-Pc-FRg"/>
+                                                        <constraint firstItem="GMj-Ec-j9J" firstAttribute="leading" secondItem="8tq-zS-apA" secondAttribute="trailing" constant="4" id="XmY-2m-599"/>
+                                                        <constraint firstItem="6fY-hR-O7X" firstAttribute="leading" secondItem="cGe-Pd-5Ss" secondAttribute="leading" id="YEs-Jp-W21"/>
+                                                        <constraint firstItem="GMj-Ec-j9J" firstAttribute="centerY" secondItem="8tq-zS-apA" secondAttribute="centerY" id="cNH-4t-IN1"/>
+                                                        <constraint firstItem="XQL-3c-pKA" firstAttribute="leading" secondItem="eLk-u0-RBs" secondAttribute="trailing" constant="12" id="ctg-VL-fg4"/>
+                                                        <constraint firstItem="AJr-qw-ZCP" firstAttribute="centerY" secondItem="VqJ-OF-cH1" secondAttribute="centerY" id="dvr-Gw-EJG"/>
+                                                        <constraint firstItem="VqJ-OF-cH1" firstAttribute="height" secondItem="AJr-qw-ZCP" secondAttribute="height" id="eDR-3l-hxX"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uFl-hy-bC6" secondAttribute="trailing" constant="10" id="eMj-ge-RUi"/>
+                                                        <constraint firstItem="Nkd-sC-lgt" firstAttribute="centerY" secondItem="w5N-vy-Lpl" secondAttribute="centerY" id="h0f-MM-Q5s"/>
+                                                        <constraint firstItem="eLk-u0-RBs" firstAttribute="leading" secondItem="aKD-zX-9jp" secondAttribute="leading" constant="10" id="h3P-5g-Uvc"/>
+                                                        <constraint firstItem="8tq-zS-apA" firstAttribute="bottom" secondItem="eLk-u0-RBs" secondAttribute="bottom" id="ha7-4Y-64p"/>
+                                                        <constraint firstItem="Dk3-qp-IO9" firstAttribute="leading" secondItem="Nkd-sC-lgt" secondAttribute="trailing" constant="7" id="l9w-e3-zB3"/>
+                                                        <constraint firstItem="VqJ-OF-cH1" firstAttribute="leading" secondItem="AJr-qw-ZCP" secondAttribute="trailing" constant="-11" id="moQ-qk-26W"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Dk3-qp-IO9" secondAttribute="trailing" constant="10" id="vB8-MF-HS3"/>
+                                                        <constraint firstItem="Dk3-qp-IO9" firstAttribute="centerY" secondItem="Nkd-sC-lgt" secondAttribute="centerY" id="vJp-XS-A3P"/>
+                                                        <constraint firstItem="w5N-vy-Lpl" firstAttribute="leading" secondItem="cGe-Pd-5Ss" secondAttribute="trailing" constant="7" id="w6F-aA-NmR"/>
+                                                        <constraint firstItem="XQL-3c-pKA" firstAttribute="top" secondItem="uFl-hy-bC6" secondAttribute="bottom" constant="12" id="yWK-Dd-Yid"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aKD-zX-9jp" firstAttribute="top" secondItem="NDg-Ut-GN3" secondAttribute="top" constant="11" id="aff-Mw-mtu"/>
+                                                <constraint firstAttribute="bottom" secondItem="aKD-zX-9jp" secondAttribute="bottom" constant="10" id="h5l-pi-szZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="aKD-zX-9jp" firstAttribute="width" secondItem="zbV-hK-fAH" secondAttribute="width" multiplier="0.914667" id="Omb-uf-Hvv"/>
+                                            <constraint firstItem="aKD-zX-9jp" firstAttribute="centerX" secondItem="zbV-hK-fAH" secondAttribute="centerX" id="Ouk-H4-pUs"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="btnCount" destination="VqJ-OF-cH1" id="znG-nT-p6U"/>
+                                            <outlet property="imgVTournament" destination="Wne-cq-KAJ" id="IfW-qs-022"/>
+                                            <outlet property="imgVUser1" destination="6fY-hR-O7X" id="jiR-fs-gkN"/>
+                                            <outlet property="imgVUser2" destination="KK4-pg-ukS" id="Qv9-vZ-Gab"/>
+                                            <outlet property="imgVUser3" destination="AJr-qw-ZCP" id="LC4-h9-GvI"/>
+                                            <outlet property="lblDate" destination="w5N-vy-Lpl" id="gAc-q9-4fi"/>
+                                            <outlet property="lblEntryFee" destination="GMj-Ec-j9J" id="I8N-5T-wyQ"/>
+                                            <outlet property="lblEntryFeeTxt" destination="8tq-zS-apA" id="bvE-Xd-8he"/>
+                                            <outlet property="lblStatus" destination="wCC-sm-Q8z" id="MOd-q4-2vr"/>
+                                            <outlet property="lblTime" destination="Dk3-qp-IO9" id="jIo-2J-xzj"/>
+                                            <outlet property="lblTournamentName" destination="uFl-hy-bC6" id="4Jn-kd-baS"/>
+                                            <outlet property="lblTournamentType" destination="XQL-3c-pKA" id="7gu-O3-lxM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vtL-5P-3ye" id="MTm-FE-ICz"/>
+                                    <outlet property="delegate" destination="vtL-5P-3ye" id="2j0-pp-lHn"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f01-cy-Vok" customClass="MIGenericView" customModule="XPTournament" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOz-eR-V4J">
+                                        <rect key="frame" x="303" y="13.666666666666664" width="56" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="X7r-Mg-eGA"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnSearchCancelCLK:" destination="vtL-5P-3ye" eventType="touchUpInside" id="tgS-81-oMp"/>
+                                        </connections>
+                                    </button>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDL-Lk-OWQ">
+                                        <rect key="frame" x="15" y="10" width="273" height="41"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tornament_search" translatesAutoresizingMaskIntoConstraints="NO" id="axc-jB-mG9">
+                                                <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="41" id="1x8-R5-Iqh"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsd-bS-L5s" customClass="MIGenericTextFiled" customModule="XPTournament" customModuleProvider="target">
+                                                <rect key="frame" x="46" y="0.0" width="222" height="41"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                <connections>
+                                                    <action selector="didChangedText:" destination="vtL-5P-3ye" eventType="editingChanged" id="bGC-eb-dpH"/>
+                                                    <outlet property="delegate" destination="vtL-5P-3ye" id="NGW-uv-3xC"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.97254901960784312" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="axc-jB-mG9" firstAttribute="leading" secondItem="vDL-Lk-OWQ" secondAttribute="leading" id="CnE-py-XpJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="dsd-bS-L5s" secondAttribute="trailing" constant="5" id="O1u-7k-5G6"/>
+                                            <constraint firstAttribute="bottom" secondItem="dsd-bS-L5s" secondAttribute="bottom" id="RCr-xb-qWM"/>
+                                            <constraint firstAttribute="bottom" secondItem="axc-jB-mG9" secondAttribute="bottom" id="Ucm-hk-9OO"/>
+                                            <constraint firstItem="axc-jB-mG9" firstAttribute="top" secondItem="vDL-Lk-OWQ" secondAttribute="top" id="bOx-qC-78B"/>
+                                            <constraint firstItem="dsd-bS-L5s" firstAttribute="leading" secondItem="axc-jB-mG9" secondAttribute="trailing" constant="5" id="jh5-rV-Tg8"/>
+                                            <constraint firstItem="dsd-bS-L5s" firstAttribute="top" secondItem="vDL-Lk-OWQ" secondAttribute="top" id="os7-gH-h7o"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="vDL-Lk-OWQ" firstAttribute="leading" secondItem="f01-cy-Vok" secondAttribute="leading" constant="15" id="27v-NY-VJW"/>
+                                    <constraint firstItem="vDL-Lk-OWQ" firstAttribute="top" secondItem="f01-cy-Vok" secondAttribute="top" constant="10" id="BQg-t2-Boc"/>
+                                    <constraint firstItem="rOz-eR-V4J" firstAttribute="centerY" secondItem="f01-cy-Vok" secondAttribute="centerY" id="Ozz-dY-x7a"/>
+                                    <constraint firstAttribute="width" secondItem="f01-cy-Vok" secondAttribute="height" multiplier="375:61" id="QFU-HP-EqY"/>
+                                    <constraint firstItem="rOz-eR-V4J" firstAttribute="leading" secondItem="vDL-Lk-OWQ" secondAttribute="trailing" constant="15" id="cfU-za-tCe"/>
+                                    <constraint firstAttribute="bottom" secondItem="vDL-Lk-OWQ" secondAttribute="bottom" priority="999" constant="10" id="gqa-5h-fcc"/>
+                                    <constraint firstAttribute="trailing" secondItem="rOz-eR-V4J" secondAttribute="trailing" constant="16" id="nAt-sN-tR0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mCq-QI-dW9" firstAttribute="leading" secondItem="sec-Cp-U4F" secondAttribute="leading" id="4AN-CC-Igm"/>
+                            <constraint firstItem="f01-cy-Vok" firstAttribute="trailing" secondItem="sec-Cp-U4F" secondAttribute="trailing" id="a13-U5-cxU"/>
+                            <constraint firstItem="sec-Cp-U4F" firstAttribute="bottom" secondItem="mCq-QI-dW9" secondAttribute="bottom" id="aeu-6f-BHU"/>
+                            <constraint firstItem="f01-cy-Vok" firstAttribute="leading" secondItem="sec-Cp-U4F" secondAttribute="leading" id="aie-uo-GWs"/>
+                            <constraint firstItem="mCq-QI-dW9" firstAttribute="top" secondItem="f01-cy-Vok" secondAttribute="bottom" id="v7b-5R-nVN"/>
+                            <constraint firstItem="sec-Cp-U4F" firstAttribute="trailing" secondItem="mCq-QI-dW9" secondAttribute="trailing" id="vAJ-5b-h8N"/>
+                            <constraint firstItem="f01-cy-Vok" firstAttribute="top" secondItem="7cT-MP-fOA" secondAttribute="top" id="xZq-1N-eBk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sec-Cp-U4F"/>
+                    </view>
+                    <connections>
+                        <outlet property="cnSearchViewTopSpace" destination="xZq-1N-eBk" id="Ldy-Rt-CjO"/>
+                        <outlet property="tblTournamentSearch" destination="mCq-QI-dW9" id="DRN-hj-QQ9"/>
+                        <outlet property="txtSearch" destination="dsd-bS-L5s" id="3Au-Bz-6qL"/>
+                        <outlet property="viewSearch" destination="vDL-Lk-OWQ" id="Wqw-lS-AcG"/>
+                        <outlet property="viewSearchBar" destination="f01-cy-Vok" id="hO4-Sy-7Fc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="etr-ON-hxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.79999999999995" y="150.73891625615764"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="XMB-V4-8NT">
+            <objects>
+                <viewController storyboardIdentifier="NotificationViewController" id="s4B-Dq-snA" customClass="NotificationViewController" customModule="XPTournament" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="2" contentMode="scaleToFill" id="k5f-IR-rGG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iwK-Wf-Dco">
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NotificationTblCell" rowHeight="82" id="mKa-9H-r7M" customClass="NotificationTblCell" customModule="XPTournament" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mKa-9H-r7M" id="427-fg-XUh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HJP-IP-oWn">
+                                                    <rect key="frame" x="23" y="16" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="HJP-IP-oWn" secondAttribute="height" multiplier="1:1" id="OXL-Kq-KIK"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="John Martin has called judge for..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWb-V3-p8X" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                    <rect key="frame" x="93.000000000000014" y="23" width="200.33333333333337" height="17"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 mins ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T68-Ke-7Qo" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                                    <rect key="frame" x="93" y="42" width="67.333333333333314" height="17"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                    <color key="textColor" red="0.71372549019607845" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view tag="103" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jH6-l2-Z8a" customClass="MIGenericView" customModule="XPTournament" customModuleProvider="target">
+                                                    <rect key="frame" x="343" y="37" width="8" height="8"/>
+                                                    <color key="backgroundColor" red="0.23137254900000001" green="0.40784313729999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="8" id="4nm-kt-TQi"/>
+                                                        <constraint firstAttribute="height" constant="8" id="drS-Dg-2pG"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1h-QD-m4O">
+                                                    <rect key="frame" x="16" y="81" width="343" height="1"/>
+                                                    <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="smV-6s-3SK"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Z1h-QD-m4O" firstAttribute="leading" secondItem="427-fg-XUh" secondAttribute="leading" constant="16" id="8DV-r8-hHw"/>
+                                                <constraint firstItem="fWb-V3-p8X" firstAttribute="leading" secondItem="HJP-IP-oWn" secondAttribute="trailing" constant="20" id="BSx-tk-AaZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="Z1h-QD-m4O" secondAttribute="bottom" id="DMg-4f-rj3"/>
+                                                <constraint firstItem="fWb-V3-p8X" firstAttribute="top" secondItem="HJP-IP-oWn" secondAttribute="top" constant="7" id="HL3-HX-aCs"/>
+                                                <constraint firstItem="HJP-IP-oWn" firstAttribute="width" secondItem="427-fg-XUh" secondAttribute="width" multiplier="0.133333" id="KqI-vt-6LK"/>
+                                                <constraint firstItem="HJP-IP-oWn" firstAttribute="top" secondItem="427-fg-XUh" secondAttribute="top" constant="16" id="QQu-Gd-3lF"/>
+                                                <constraint firstItem="HJP-IP-oWn" firstAttribute="leading" secondItem="427-fg-XUh" secondAttribute="leading" constant="23" id="SGi-Fk-Epu"/>
+                                                <constraint firstAttribute="trailing" secondItem="jH6-l2-Z8a" secondAttribute="trailing" constant="24" id="ThX-76-3vA"/>
+                                                <constraint firstAttribute="trailing" secondItem="Z1h-QD-m4O" secondAttribute="trailing" constant="16" id="UcL-gl-RNJ"/>
+                                                <constraint firstItem="Z1h-QD-m4O" firstAttribute="top" secondItem="T68-Ke-7Qo" secondAttribute="bottom" constant="22" id="Wqn-nn-Xdv"/>
+                                                <constraint firstItem="jH6-l2-Z8a" firstAttribute="centerY" secondItem="427-fg-XUh" secondAttribute="centerY" id="axD-lP-iPO"/>
+                                                <constraint firstItem="T68-Ke-7Qo" firstAttribute="leading" secondItem="fWb-V3-p8X" secondAttribute="leading" id="siL-Gp-7Y4"/>
+                                                <constraint firstItem="T68-Ke-7Qo" firstAttribute="top" secondItem="fWb-V3-p8X" secondAttribute="bottom" constant="2" id="yYm-fz-xg7"/>
+                                                <constraint firstItem="jH6-l2-Z8a" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fWb-V3-p8X" secondAttribute="trailing" constant="10" id="zFk-YX-N00"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgVPlayer" destination="HJP-IP-oWn" id="byy-kQ-ZLY"/>
+                                            <outlet property="lblMsg" destination="fWb-V3-p8X" id="aup-en-J9R"/>
+                                            <outlet property="lblTime" destination="T68-Ke-7Qo" id="llR-3u-Iyr"/>
+                                            <outlet property="vwDot" destination="jH6-l2-Z8a" id="YGe-bS-8Q4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="s4B-Dq-snA" id="HFQ-cy-cwv"/>
+                                    <outlet property="delegate" destination="s4B-Dq-snA" id="BNY-6F-w6g"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iwK-Wf-Dco" firstAttribute="trailing" secondItem="hfu-dS-FEk" secondAttribute="trailing" id="R3W-0H-hqa"/>
+                            <constraint firstItem="iwK-Wf-Dco" firstAttribute="leading" secondItem="hfu-dS-FEk" secondAttribute="leading" id="TCv-rh-KI2"/>
+                            <constraint firstItem="iwK-Wf-Dco" firstAttribute="top" secondItem="hfu-dS-FEk" secondAttribute="top" id="iIv-3K-ev0"/>
+                            <constraint firstItem="hfu-dS-FEk" firstAttribute="bottom" secondItem="iwK-Wf-Dco" secondAttribute="bottom" constant="49" id="iYa-IW-U8o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hfu-dS-FEk"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblNotification" destination="iwK-Wf-Dco" id="RBa-tX-qPG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QdV-SE-YYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528.8" y="135.96059113300493"/>
+        </scene>
+        <!--Upcoming Match View Controller-->
+        <scene sceneID="KLX-kq-zL6">
+            <objects>
+                <viewController storyboardIdentifier="UpcomingMatchViewController" id="Xf6-mR-uBS" customClass="UpcomingMatchViewController" customModule="XPTournament" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="2" contentMode="scaleToFill" id="1UE-AZ-TtC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tSj-MG-4mO">
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xf6-mR-uBS" id="R2r-fH-5fZ"/>
+                                    <outlet property="delegate" destination="Xf6-mR-uBS" id="oCa-U2-zkl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hFx-5b-8sn" firstAttribute="bottom" secondItem="tSj-MG-4mO" secondAttribute="bottom" constant="49" id="1U7-U9-Qa4"/>
+                            <constraint firstItem="tSj-MG-4mO" firstAttribute="trailing" secondItem="hFx-5b-8sn" secondAttribute="trailing" id="Pkl-OD-ErY"/>
+                            <constraint firstItem="tSj-MG-4mO" firstAttribute="top" secondItem="hFx-5b-8sn" secondAttribute="top" id="iUA-it-wLY"/>
+                            <constraint firstItem="tSj-MG-4mO" firstAttribute="leading" secondItem="hFx-5b-8sn" secondAttribute="leading" id="zuf-e7-Uwj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hFx-5b-8sn"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblMatch" destination="tSj-MG-4mO" id="UM3-jN-Laj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Bd-OD-XMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2202.4000000000001" y="133.74384236453201"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_calendar" width="12.333333015441895" height="12.333333015441895"/>
+        <image name="ic_clock" width="13.333333015441895" height="14.333333015441895"/>
+        <image name="ic_tornament_search" width="17.333333969116211" height="17.333333969116211"/>
+        <image name="img1.png" width="310" height="154"/>
+        <image name="img2.png" width="30" height="30"/>
+        <image name="img3.png" width="30" height="30"/>
+        <image name="img5.png" width="50" height="50"/>
+    </resources>
+</document>

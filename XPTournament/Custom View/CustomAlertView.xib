@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bTn-sd-QTt" customClass="CustomAlertView" customModule="XPTournament" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMv-Gb-VQD" customClass="MIGenericView" customModule="XPTournament" customModuleProvider="target">
+                    <rect key="frame" x="15" y="258.5" width="345" height="150"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9f-CG-su9" customClass="MIGenericView" customModule="XPTournament" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="345" height="150"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="tUP-J0-5aY">
+                                    <rect key="frame" x="132.5" y="10" width="80" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="ETV-ah-PW2"/>
+                                        <constraint firstAttribute="width" constant="80" id="Fyn-iK-zJT"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start date is blank." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Z9-P7-vKU" customClass="MIGenericLabel" customModule="XPTournament" customModuleProvider="target">
+                                    <rect key="frame" x="10" y="15" width="325" height="70"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="JX8-px-mYC"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjZ-ed-kOr" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="100" width="172.5" height="50"/>
+                                    <color key="backgroundColor" red="0.12941176469999999" green="0.31764705879999999" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="NMr-Sp-scP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                    <state key="normal">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnq-BM-Ec1" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                    <rect key="frame" x="172.5" y="100" width="172.5" height="50"/>
+                                    <color key="backgroundColor" red="0.12941176469999999" green="0.31764705879999999" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                    <state key="normal">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsJ-h6-Fax">
+                                    <rect key="frame" x="172.5" y="100" width="1" height="50"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="1" id="wf7-L6-O3s"/>
+                                    </constraints>
+                                </view>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wo6-AQ-pFe" customClass="MIGenericButton" customModule="XPTournament" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="100" width="345" height="50"/>
+                                    <color key="backgroundColor" red="0.12941176469999999" green="0.31764705879999999" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                    <state key="normal" title="Ok">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="JsJ-h6-Fax" firstAttribute="leading" secondItem="RjZ-ed-kOr" secondAttribute="trailing" id="2dL-Rt-fKj"/>
+                                <constraint firstItem="qnq-BM-Ec1" firstAttribute="height" secondItem="Wo6-AQ-pFe" secondAttribute="height" id="3v5-2O-kE7"/>
+                                <constraint firstAttribute="bottom" secondItem="Wo6-AQ-pFe" secondAttribute="bottom" id="8q4-6o-RR4"/>
+                                <constraint firstItem="RjZ-ed-kOr" firstAttribute="top" secondItem="6Z9-P7-vKU" secondAttribute="bottom" constant="15" id="CS7-kX-iko"/>
+                                <constraint firstItem="qnq-BM-Ec1" firstAttribute="bottom" secondItem="RjZ-ed-kOr" secondAttribute="bottom" id="EF6-Te-Wam"/>
+                                <constraint firstItem="6Z9-P7-vKU" firstAttribute="leading" secondItem="Z9f-CG-su9" secondAttribute="leading" constant="10" id="Ekx-JF-zko"/>
+                                <constraint firstAttribute="trailing" secondItem="Wo6-AQ-pFe" secondAttribute="trailing" id="IeJ-EZ-9te"/>
+                                <constraint firstItem="6Z9-P7-vKU" firstAttribute="top" secondItem="Z9f-CG-su9" secondAttribute="top" constant="15" id="JOs-UK-mXM"/>
+                                <constraint firstItem="qnq-BM-Ec1" firstAttribute="width" secondItem="RjZ-ed-kOr" secondAttribute="width" id="Jpu-3Y-lnJ"/>
+                                <constraint firstAttribute="trailing" secondItem="6Z9-P7-vKU" secondAttribute="trailing" constant="10" id="K7R-Wb-un6"/>
+                                <constraint firstItem="tUP-J0-5aY" firstAttribute="centerX" secondItem="Z9f-CG-su9" secondAttribute="centerX" id="Lbf-UL-TS2"/>
+                                <constraint firstItem="Wo6-AQ-pFe" firstAttribute="leading" secondItem="Z9f-CG-su9" secondAttribute="leading" id="NoL-PH-gVv"/>
+                                <constraint firstItem="JsJ-h6-Fax" firstAttribute="height" secondItem="qnq-BM-Ec1" secondAttribute="height" id="ad2-hb-iXm"/>
+                                <constraint firstAttribute="trailing" secondItem="qnq-BM-Ec1" secondAttribute="trailing" id="dDt-vg-dru"/>
+                                <constraint firstItem="tUP-J0-5aY" firstAttribute="centerY" secondItem="6Z9-P7-vKU" secondAttribute="centerY" id="djz-sa-Z8K"/>
+                                <constraint firstAttribute="bottom" secondItem="RjZ-ed-kOr" secondAttribute="bottom" id="dqe-JL-XCC"/>
+                                <constraint firstItem="qnq-BM-Ec1" firstAttribute="leading" secondItem="RjZ-ed-kOr" secondAttribute="trailing" id="gEH-84-J7E"/>
+                                <constraint firstAttribute="bottom" secondItem="JsJ-h6-Fax" secondAttribute="bottom" id="u8i-wW-qwb"/>
+                                <constraint firstItem="qnq-BM-Ec1" firstAttribute="height" secondItem="RjZ-ed-kOr" secondAttribute="height" id="ufn-Gr-Pr5"/>
+                                <constraint firstItem="RjZ-ed-kOr" firstAttribute="leading" secondItem="Z9f-CG-su9" secondAttribute="leading" id="yeb-BH-qmy"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Z9f-CG-su9" firstAttribute="leading" secondItem="XMv-Gb-VQD" secondAttribute="leading" id="Vnl-Lp-F5f"/>
+                        <constraint firstAttribute="trailing" secondItem="Z9f-CG-su9" secondAttribute="trailing" id="gO5-sb-2hE"/>
+                        <constraint firstAttribute="bottom" secondItem="Z9f-CG-su9" secondAttribute="bottom" id="j48-Qr-OtG"/>
+                        <constraint firstItem="Z9f-CG-su9" firstAttribute="top" secondItem="XMv-Gb-VQD" secondAttribute="top" id="tmL-yv-bmp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dCY-lF-QY0" firstAttribute="trailing" secondItem="XMv-Gb-VQD" secondAttribute="trailing" constant="15" id="GCT-bs-Btf"/>
+                <constraint firstItem="XMv-Gb-VQD" firstAttribute="leading" secondItem="dCY-lF-QY0" secondAttribute="leading" constant="15" id="cqp-FB-7qS"/>
+                <constraint firstItem="XMv-Gb-VQD" firstAttribute="centerY" secondItem="bTn-sd-QTt" secondAttribute="centerY" id="qgN-Rp-lVa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="dCY-lF-QY0"/>
+            <connections>
+                <outlet property="btnAlertOk" destination="Wo6-AQ-pFe" id="zWH-ye-JuW"/>
+                <outlet property="btnCancel" destination="RjZ-ed-kOr" id="Kf4-HL-oND"/>
+                <outlet property="btnOk" destination="qnq-BM-Ec1" id="pU0-T4-kwS"/>
+                <outlet property="lblMsg" destination="6Z9-P7-vKU" id="y0V-1l-zYq"/>
+                <outlet property="vwLine" destination="JsJ-h6-Fax" id="mxb-8K-2r6"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_logo" width="109" height="79"/>
+    </resources>
+</document>
